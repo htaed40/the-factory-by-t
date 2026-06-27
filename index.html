@@ -13,42 +13,60 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="shell">
+    <header class="topbar" aria-label="The Factory navigation">
+      <a class="brand" href="https://htaed40.github.io/the-factory-by-t/">The Factory by T</a>
+      <nav aria-label="Primary">
+        <a href="https://www.etsy.com/shop/MadeOnI24">Shop</a>
+        <a href="https://www.instagram.com/thefactorybyt/">Instagram</a>
+        <a href="https://www.youtube.com/@HistoryUnpacked26">YouTube</a>
+      </nav>
+    </header>
+
+    <main>
       <section class="hero" aria-labelledby="page-title">
-        <div class="mark">
-          <img src="assets/the-factory-badge.png" alt="The Factory badge with creative, tech, finance, and product icons">
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/the-factory-badge-cutout.png" alt="">
         </div>
-        <div class="intro">
-          <p class="eyebrow">The Factory by T</p>
-          <h1 id="page-title">AI-built stories, products, videos, and experiments.</h1>
+        <div class="hero-copy">
+          <p class="eyebrow">Stories. Products. Systems.</p>
+          <h1 id="page-title">The Factory turns AI experiments into things you can watch, wear, use, and improve.</h1>
           <p class="summary">
-            A working hub for MadeOnI24, Cozy Hostile, History Unpacked, Budget Basis,
-            Prompt &amp; Error, and the systems being built behind them.
+            Home base for MadeOnI24, Cozy Hostile, History Unpacked, Budget Basis,
+            Prompt &amp; Error, and the workbench behind them.
           </p>
           <div class="actions" aria-label="Primary links">
             <a class="primary" href="https://www.etsy.com/shop/MadeOnI24">Shop MadeOnI24</a>
-            <a href="https://www.instagram.com/thefactorybyt/">Instagram</a>
+            <a href="https://www.instagram.com/thefactorybyt/">Follow The Factory</a>
           </div>
         </div>
       </section>
 
-      <section class="grid" aria-label="Factory lanes">
-        <a class="lane" href="https://www.etsy.com/shop/MadeOnI24">
+      <section class="lanes" aria-label="Factory lanes">
+        <a class="lane feature" href="https://www.etsy.com/shop/MadeOnI24">
           <span>MadeOnI24</span>
-          <strong>Cozy Hostile products and digital downloads</strong>
+          <strong>Cozy Hostile goods and digital downloads</strong>
+          <small>Soft art for people who like their peace with boundaries.</small>
         </a>
         <a class="lane" href="https://www.youtube.com/@HistoryUnpacked26">
           <span>History Unpacked</span>
-          <strong>Short sourced history stories and explainers</strong>
+          <strong>Short sourced history stories</strong>
+          <small>Clear, compact explainers with receipts.</small>
         </a>
         <a class="lane" href="https://www.youtube.com/@BudgetBasis">
           <span>Budget Basis</span>
-          <strong>Plain-language budgeting and money systems</strong>
+          <strong>Plain-language money systems</strong>
+          <small>Budgeting without the lecture voice.</small>
         </a>
         <a class="lane" href="https://www.youtube.com/@PromptNError">
           <span>Prompt &amp; Error</span>
-          <strong>AI experiments, failures, tools, and fixes</strong>
+          <strong>AI experiments and fixes</strong>
+          <small>What worked, what broke, and what changed.</small>
         </a>
+      </section>
+
+      <section class="note" aria-label="Current focus">
+        <p>Current build focus</p>
+        <strong>Cozy Hostile launch, organic marketing, and repeatable media systems.</strong>
       </section>
     </main>
   </body>
