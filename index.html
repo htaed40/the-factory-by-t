@@ -16,9 +16,9 @@
     <header class="topbar" aria-label="The Factory navigation">
       <a class="brand" href="https://htaed40.github.io/the-factory-by-t/">The Factory by T</a>
       <nav aria-label="Primary">
-        <a href="https://www.etsy.com/shop/MadeOnI24">Shop</a>
+        <a href="https://www.etsy.com/shop/MadeOnI24" data-track data-campaign="cozy_hostile_launch">Shop</a>
         <a href="https://www.instagram.com/thefactorybyt/">Instagram</a>
-        <a href="https://www.youtube.com/@HistoryUnpacked26">YouTube</a>
+        <a href="https://www.youtube.com/@HistoryUnpacked26" data-track data-campaign="history_unpacked">YouTube</a>
       </nav>
     </header>
 
@@ -29,45 +29,63 @@
         </div>
         <div class="hero-copy">
           <p class="eyebrow">Stories. Products. Systems.</p>
-          <h1 id="page-title">The Factory builds original products, stories, and media brands with momentum.</h1>
+          <h1 id="page-title">Shop Cozy Hostile. Watch practical channels. Follow what The Factory builds next.</h1>
           <p class="summary">
-            Home base for MadeOnI24, Cozy Hostile, History Unpacked, Budget Basis,
-            and Prompt &amp; Error.
+            MadeOnI24 is the product lane. History Unpacked, Budget Basis, and
+            Prompt &amp; Error are the media lanes growing beside it.
           </p>
           <div class="actions" aria-label="Primary links">
-            <a class="primary" href="https://www.etsy.com/shop/MadeOnI24">Shop MadeOnI24</a>
+            <a class="primary" href="https://www.etsy.com/shop/MadeOnI24" data-track data-campaign="cozy_hostile_launch">Shop Cozy Hostile</a>
+            <a href="https://www.youtube.com/@HistoryUnpacked26" data-track data-campaign="history_unpacked">Watch History Unpacked</a>
             <a href="https://www.instagram.com/thefactorybyt/">Follow The Factory</a>
           </div>
         </div>
       </section>
 
       <section class="lanes" aria-label="Factory lanes">
-        <a class="lane feature" href="https://www.etsy.com/shop/MadeOnI24">
-          <span>MadeOnI24</span>
-          <strong>Cozy Hostile goods and digital downloads</strong>
-          <small>Soft art for people who like their peace with boundaries.</small>
+        <a class="lane feature" href="https://www.etsy.com/shop/MadeOnI24" data-track data-campaign="cozy_hostile_launch">
+          <span>Shop</span>
+          <strong>Cozy Hostile on MadeOnI24</strong>
+          <small>Mugs, shirts, stickers, and digital goods for quiet boundaries.</small>
         </a>
-        <a class="lane" href="https://www.youtube.com/@HistoryUnpacked26">
-          <span>History Unpacked</span>
+        <a class="lane" href="https://www.youtube.com/@HistoryUnpacked26" data-track data-campaign="history_unpacked">
+          <span>Watch</span>
           <strong>Short sourced history stories</strong>
           <small>Clear, compact explainers with receipts.</small>
         </a>
-        <a class="lane" href="https://www.youtube.com/@BudgetBasis">
-          <span>Budget Basis</span>
+        <a class="lane" href="https://www.youtube.com/@BudgetBasis" data-track data-campaign="budget_basis">
+          <span>Learn</span>
           <strong>Plain-language money systems</strong>
           <small>Budgeting without the lecture voice.</small>
         </a>
-        <a class="lane" href="https://www.youtube.com/@PromptNError">
-          <span>Prompt &amp; Error</span>
+        <a class="lane" href="https://www.youtube.com/@PromptNError" data-track data-campaign="prompt_error">
+          <span>Build</span>
           <strong>AI tools, lessons, and practical fixes</strong>
           <small>What worked, what broke, and what changed.</small>
         </a>
       </section>
 
       <section class="note" aria-label="Current focus">
-        <p>Current build focus</p>
-        <strong>Launching Cozy Hostile, growing MadeOnI24, and building practical media brands.</strong>
+        <p>Best first click</p>
+        <strong>Shop Cozy Hostile if you came for products. Use the other lanes for videos, lessons, and launch updates.</strong>
       </section>
     </main>
+    <script>
+      (() => {
+        const incoming = new URLSearchParams(window.location.search);
+        const source = incoming.get("utm_source") || "the_factory_landing";
+        const medium = incoming.get("utm_medium") || "site";
+        document.querySelectorAll("a[data-track]").forEach((link) => {
+          const url = new URL(link.href);
+          url.searchParams.set("utm_source", source);
+          url.searchParams.set("utm_medium", medium);
+          url.searchParams.set(
+            "utm_campaign",
+            link.dataset.campaign || incoming.get("utm_campaign") || "factory_launch"
+          );
+          link.href = url.toString();
+        });
+      })();
+    </script>
   </body>
 </html>
