@@ -20,10 +20,12 @@ Files:
 
 Purpose:
 - Temporary hub for The Factory by T.
-- Link to MadeOnI24 Etsy, Instagram, History Unpacked, Budget Basis, and Prompt
-  & Error.
+- Link to The Factory Facebook, MadeOnI24 Etsy, Instagram, History Unpacked,
+  Budget Basis, and Prompt & Error.
 - Instagram bio link target.
 - Pinterest website/domain claim target.
+- Facebook follow destination for daily link posts, launch notes, and
+  work-in-progress updates.
 
 Publishing path:
 1. Commit this folder's contents.

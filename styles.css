@@ -194,7 +194,7 @@ h1 {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.2fr repeat(3, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
   width: min(1180px, calc(100% - 48px));
   margin: -62px auto 0;
@@ -216,6 +216,12 @@ h1 {
 .lane.feature {
   background:
     linear-gradient(135deg, rgba(241, 185, 68, 0.22), rgba(11, 14, 18, 0.88) 54%),
+    var(--panel);
+}
+
+.lane.social {
+  background:
+    linear-gradient(135deg, rgba(69, 215, 232, 0.18), rgba(11, 14, 18, 0.88) 56%),
     var(--panel);
 }
 
