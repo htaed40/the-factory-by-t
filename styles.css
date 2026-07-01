@@ -278,6 +278,29 @@ h1 {
   line-height: 1.2;
 }
 
+.policy-page {
+  width: min(880px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.policy-page h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  line-height: 0.95;
+}
+
+.policy-page h2 {
+  margin: 2rem 0 0.65rem;
+  font-size: 1.2rem;
+}
+
+.policy-page p {
+  max-width: 72ch;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
